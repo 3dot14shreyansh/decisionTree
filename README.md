@@ -13,3 +13,5 @@ Ensemble technique:
 Where we involve multiple decision maker. Here decision makers are machine learning algorithums.
 ### Bagging:
 Where multiple number of decision makers are invloved but all are of same type. There recomondation or output is averaged to arrive on to a conclusion.
+### Boosting:
+Multiple decision makers will be involved with some less weightage and some with more weightage 
