@@ -35,9 +35,49 @@ Multiple decision makers will be involved with some less weightage and some with
    2. **Computational expense**:- Gini Impurity uses division, multiplication, addition and substraction for its calculation, hence ***Gini Impurity    matric is faster when compared to Imformation Gain impurtity matric*** (as it uses logarthms in addition to DMAS).
   
 4. Imformation Gain :-  
-   1. **Value range**:- Imformation Gain ranges from 0 to 1, where 0 denotes minimum impurity and 0.5 denotes maximum impurity.
+   1. **Value range**:- Imformation Gain ranges from 0 to 1, where 0 denotes minimum impurity and 1 denotes maximum impurity.
    2. **Computational expense**:- Gini Impurity uses division, multiplication, addition and substraction for its calculation, hence ***Gini Impurity    matric is faster when compared to Imformation Gain impurtity matric*** (as it uses logarthms in addition to DMAS).
    
+5. ***Example of Gini Impurity calculation*** :- 
+
+Gini impurity calculation based on the feature 'Class' <br />
+| Class | Stayed in hostel (No) | Stayed in hostel (Yes) | Total (n) | Probability (No) | Probability (Yes) |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| 8 | 1 | 2 | 3 | 1/3 | 2/3 |
+| 9 | 1 | 2 | 3 | 1/3 | 2/3 |
+| 10 | 3 | 1 | 4 | 3/4 | 1/4 |
+| 11 | 1 | 3 | 4 | 1/4 | 3/4 | 
    
-   
-   
+Let us denote Gini Impurity for Class 8 as G(8), probability of student stayed in hostel as P(Y) and probability of student did not stayed in hostel as P(N) 
+
+G(8) = $1 - P(Y)^2 - P(Y)^2$ <br />
+G(8) = $1 - (2/3)^2 - (1/3)^2$ <br />
+G(8) = 4/9 <br />
+Similarly G(9) = 4/9 <br />
+G(10) = 6/16 <br />
+G(11) = 6/16 <br />
+
+Now Gini impurity based on faeture (Class) of a dataset = G(Class)
+
+G(Class) = ${(n_8 / T) * G_8} + {(n_9 / T) * G_9}$ +  (n<sub>10</sub> / T) * G<sub>10</sub> + (n<sub>11</sub> / T) * G<sub>11</sub> <br />
+G(Class) = (3/14 * 4/9) + (3/14 * 4/9) + (4/16 * 6/16) + (4/16 * 6/16) <br />
+G(Class) = 0.404 ---------------------------------------------------------------------------------------------------------------------- (i)
+
+Gini impurity based on feature 'Gender'. <br />
+
+| Gender | Stayed in hostel (No) | Stayed in hostel (Yes) | Total (n) | Probability (No) | Probability (Yes) |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| M | 3 | 5 | 8 | 3/8 | 5/8 |
+| F | 3 | 3 | 6 | 3/6 | 3/6 | 
+
+Let ua denote Gini Impurity for Gender 'Male' as G(M), probability of student stayed in hostel as P(Y) and probability of student did not stayed in hostel as P(N) 
+
+G(M) = $1 - P(Y)^2 - P(Y)^2$ <br />
+G(M) = $1 - (5/8)^2 - (3/8)^2$ <br />
+G(M) = 0.47 <br />
+for G(F) = 0.5 <br />
+Therefore G(Gender) = 0.482 ---------------------------------------------------------------------------------------------------------- (ii)
+
+from (i) and (ii) we get to know that G(Gender) > G(Class), hence the first split between the tree will be based on Gender and not on class. This is because we shall let the least impure branch as the node of the tree for better stability and therefore leading to efficient **Decision tree design**.
+ 
+6. Information Gain sample calculation:-
