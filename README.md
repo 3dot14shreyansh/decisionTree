@@ -19,3 +19,25 @@ Where we involve multiple decision maker. Here decision makers are machine learn
 - Disadvantage - Whenever a random forest algorithum is used in bagging technique, it is impossible to know the decision tree's branch and decision maker nodes in any way. ***This is the only disadvantage of Bagging technique.***
 ### Boosting:
 Multiple decision makers will be involved with some less weightage and some with more weightage 
+
+
+
+### Design of Decision Tree 
+
+1. Based on the model's need, ***Gini Impurity*** or ***Imformation Gain*** are used to design an efficient decision tree. These are the methods from which a tree's overall structure and the partition of branches are decided.
+
+2. Different decision tree algorithms utilize different impurity metric:
+   1. For ***C.A.R.T.***, decision tree uses ***Gini Impurity*** as impurity matrics.
+   2. For **I.D. 3** and ***C.4.5.***, decision tree uses ***Imformation Gain*** as impurity matrics.
+
+3. Gini Impurity :-
+   1. **Value range**:- Gini Impurity ranges from 0 to 0.5, where 0 denotes minimum impurity and 0.5 denotes maximum impurity.
+   2. **Computational expense**:- Gini Impurity uses division, multiplication, addition and substraction for its calculation, hence ***Gini Impurity    matric is faster when compared to Imformation Gain impurtity matric*** (as it uses logarthms in addition to DMAS).
+  
+4. Imformation Gain :-  
+   1. **Value range**:- Imformation Gain ranges from 0 to 1, where 0 denotes minimum impurity and 0.5 denotes maximum impurity.
+   2. **Computational expense**:- Gini Impurity uses division, multiplication, addition and substraction for its calculation, hence ***Gini Impurity    matric is faster when compared to Imformation Gain impurtity matric*** (as it uses logarthms in addition to DMAS).
+   
+   
+   
+   
