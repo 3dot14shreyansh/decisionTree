@@ -101,7 +101,7 @@ from (i) and (ii) we get to know that G(Gender) > G(Class), hence the first spli
        E<sub>(class_before)</sub> = 0.9854
        
        IE<sub>(class)</sub> = E<sub>(class_before)</sub> - E<sub>(class_after)</sub> <br />
-       IE<sub>(class)</sub> = $ 0.9854 - 0.854 $ <br />
+       IE<sub>(class)</sub> = 0.9854 - 0.854  <br />
        IE<sub>(class)</sub> = 0.1314
        
        Similarly we can calculate IE<sub>(gender)</sub> <br />
