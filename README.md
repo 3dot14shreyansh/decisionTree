@@ -80,4 +80,34 @@ Therefore G(Gender) = 0.482 ----------------------------------------------------
 
 from (i) and (ii) we get to know that G(Gender) > G(Class), hence the first split between the tree will be based on Gender and not on class. This is because we shall let the least impure branch as the node of the tree for better stability and therefore leading to efficient **Decision tree design**.
  
-6. Information Gain sample calculation:-
+6.  ***Example of Imformation Gain calculation*** :- 
+    1. Let E = Entropy, I.E. = Entropy Gain and P = Probability. <br />
+       where E = -P{log(P)} and I.E. = E(before) - E(after)
+    2. Calculation of Entropy for 'Class' 8, 9, 10, 11 from the above table
+       E(8) = $- P_y{log(P_y)} + P_n{log(P_n)}$ <br />
+       E(8) = -2/3{log(2/3)} + 1/3{log(1/3)} <br />
+       E(8) = 0.918
+       
+       Similarly E(9) = 0.918, E(10) = 0.811 and E(11) = 0.811
+       
+    3. Calculation of Imformation Gain (I.E.) from Entropy :- <br />
+       
+       E<sub>(class)</sub> = (Number of instance from class / Total number of class) * E<sub> class </sub> <br />
+       E<sub>(class)</sub> = $(3/14 * 0.918) + (3/14 * 0.918) + (4/14 * 0.811) + (4/14 * 0.811)$
+       Therefore E<sub>(class_after)</sub> = 0.854
+       
+       E<sub>(class_before)</sub> = $-P_y * log_2(P_y) + P_n * log_2(P_n)$ <br />
+       E<sub>(class_before)</sub> = $-8/14 * P(8/14) + 6/14 * P(6/14)$ <br />
+       E<sub>(class_before)</sub> = 0.9854
+       
+       IE<sub>(class)</sub> = E<sub>(class_before)</sub> - E<sub>(class_after)</sub> <br />
+       IE<sub>(class)</sub> = $ 0.9854 - 0.854 $ <br />
+       IE<sub>(class)</sub> = 0.1314
+       
+       Similarly we can calculate IE<sub>(gender)</sub> <br />
+       IE<sub>(gender)</sub>  = 0.01
+       
+       Therefore IE<sub>(gender)</sub> < IE<sub>(class)</sub>
+       
+       
+       
