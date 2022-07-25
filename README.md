@@ -108,6 +108,7 @@ from (i) and (ii) we get to know that G(Gender) > G(Class), hence the first spli
        IE<sub>(gender)</sub>  = 0.01
        
        Therefore IE<sub>(gender)</sub> < IE<sub>(class)</sub>
+7. Hyperparameter of Decision tree
        
        
        
